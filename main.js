@@ -40,3 +40,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 }); // END DOMContentLoaded
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+
+    if (!form) return;
+
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch("/.netlify/functions/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                alert("Message sent successfully!");
+                form.requestFullscreen();
+            } else {
+                alert("There was an error sending your message.");
+            }   
+        } catch (error) {
+            alert("Network error. Please try again.");
+        }
+    });
+});
