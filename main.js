@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (response.ok) {
                 alert("Message sent successfully!");
-                form.requestFullscreen();
+                form.reset();
             } else {
                 alert("There was an error sending your message.");
             }   
