@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 }); // END DOMContentLoaded
 
+   /* ------------------------------
+        CONTACT FORM SUBMISSION
+    ------------------------------ */
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
 
@@ -72,3 +76,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+   /* ------------------------------
+        CONTACT POPUP
+    ------------------------------ */
+const contactBtn = document.getElementById("contactBtn");
+const popup = document.getElementById("contactPopup");
+const closeBtn = document.querySelector(".close");
+
+contactBtn.onclick = function() {
+    popup.style.display = "flex";
+}
+
+closeBtn.onclick = function() {
+    popup.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+}

@@ -426,7 +426,7 @@ header{
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-.hero_btn {
+/* .hero_btn {
     display: inline-block;
     transition: background 0.2s ease, transform 0.15s ease;
 }
@@ -437,6 +437,63 @@ header{
 
 .hero_btn:active {
     transform: translateY(0);
+} */
+#contactBtn {
+    background-color: var(--clr-secondary);
+    color: var(--clr-dark);
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+#contactBtn:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-light);
+    transform: translateY(-2px);
+}
+
+#contactBtn:active {
+    transform: translateY(0);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: var(--clr-light);
+    border: 8px solid #f2e844;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    font-weight: var(--fw-bold);
+}
+
+.phone-number {
+    font-size: 1.2rem;
+    color: var(--clr-primary);
+    text-decoration: none;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .hero_text-contact {
@@ -620,12 +677,12 @@ header{
     .hero_form h4 {
         text-align: center;
     }
-    .hero_btn {
+    /* .hero_btn {
         margin: 1rem auto 0;
         padding: 0.8rem 1.6rem;
         font-size: 1rem;
         display: inline-block;
-    }
+    } */
 }
 
 @media (max-width: 430px){
