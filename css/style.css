@@ -438,7 +438,7 @@ header{
 .hero_btn:active {
     transform: translateY(0);
 } */
-#contactBtn {
+.contact-btn {
     background-color: var(--clr-secondary);
     color: var(--clr-dark);
     padding: 0.8rem 1.6rem;
@@ -452,13 +452,13 @@ header{
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
 
-#contactBtn:hover {
+.contact-btn:hover {
     background-color: var(--clr-primary);
     color: var(--clr-light);
     transform: translateY(-2px);
 }
 
-#contactBtn:active {
+.contact-btn:active {
     transform: translateY(0);
 }
 
@@ -475,13 +475,24 @@ header{
 }
 
 .popup-content {
-    background: var(--clr-light);
-    border: 8px solid #f2e844;
+    background: var(--clr-primary);
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
     max-width: 300px;
     font-weight: var(--fw-bold);
+    margin: 0 auto;
+}
+
+.popup-content p {
+    margin: 0 auto;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--clr-dark);
+}
+.popup-content  a{
+    font-size: 1.5rem;
+    margin: 0 auto;
 }
 
 .phone-number {
@@ -494,6 +505,17 @@ header{
     float: right;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+@keyframes popupFade{
+    from{
+        transform:scale(0.9);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;  
+    }
 }
 
 .hero_text-contact {

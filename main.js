@@ -80,20 +80,15 @@ document.addEventListener("DOMContentLoaded", function () {
    /* ------------------------------
         CONTACT POPUP
     ------------------------------ */
-const contactBtn = document.getElementById("contactBtn");
-const popup = document.getElementById("contactPopup");
-const closeBtn = document.querySelector(".close");
+const buttons = document.querySelectorAll(".contact-trigger");
+const popup = document.querySelector(".contactPopup");
 
-contactBtn.onclick = function() {
-    popup.style.display = "flex";
-}
+buttons.forEach(button => {
+    button.addEventListener("click", function () {
+        popup.style.display = "flex";
+    });
+});
 
-closeBtn.onclick = function() {
+popup.addEventListener("click", function () {
     popup.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == popup) {
-        popup.style.display = "none";
-    }
-}
+});
