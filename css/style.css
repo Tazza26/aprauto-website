@@ -1078,9 +1078,12 @@ center image in the grid
 }
 
 .faq_question {
+    appearance: none;
+    -webkit-appearance: none;
     background: none;
     border: none;
     width: 100%;
+    color: var(--clr-dark);
     text-align: left;
     font-size: 1.1rem;
     font-weight: var(--fw-bold);
@@ -1093,7 +1096,10 @@ center image in the grid
 .faq_question::after {
     content: '+';
     position: absolute;
-    right: 10px;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
     transition: transform 0.2s;
 }
 

@@ -7,7 +7,7 @@ exports.handler = async function (event, context) {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     const msg = {
-      to: "autopts@bigpond.net.au",
+      to: "admin@aprauto.com.au",
       from: "noreply@aprauto.com.au",
       subject: `New Quote Request from ${data.name}`,
       text: `
