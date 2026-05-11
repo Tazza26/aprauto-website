@@ -1,15 +1,21 @@
 const sgMail = require("@sendgrid/mail");
 
-exports.handler = async function (event, context) {
+exports.handler = async function (event) {
   try {
     const data = JSON.parse(event.body);
 
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+    const services = Array.isArray(data.service)
+      ? data.service.join(", ")
+      : "None selected";
+
     const msg = {
       to: "admin@aprauto.com.au",
       from: "noreply@aprauto.com.au",
-      subject: `New Quote Request from ${data.name}`,
+      replyTo: data.email,
+      subject: `New Booking Request from ${data.name}`,
+
       text: `
         Name: ${data.name}
         Email: ${data.email}
@@ -18,8 +24,10 @@ exports.handler = async function (event, context) {
         Vehicle: ${data.vehicle}
         Kilometers: ${data.kilometers}
         Preferred Date: ${data.preferred_date}
-        Services: ${data.service.join(", ")}
-        Message: ${data.message}
+        Services: ${service}
+
+        Message: 
+        ${data.message}
       `,
     };
 
@@ -27,15 +35,19 @@ exports.handler = async function (event, context) {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "Email sent successfully!" }),
+      body: JSON.stringify({ 
+        message: "Email sent successfully!",
+       }),
     };
+
   } catch (error) {
-    
-    console.log(error);
-    
+    console.error(error.response?.body || error);
+
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message }),
+      body: JSON.stringify({ 
+        error: "Failed to send email.",
+      }),
     };
   }
 };
