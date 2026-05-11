@@ -41,7 +41,8 @@ exports.handler = async function (event) {
     };
 
   } catch (error) {
-    console.error(error.response?.body || error);
+    console.error("SENDGRID ERROR:", error);
+    console.error("SENDGRID RESPONSE:", error.response?.body);
 
     return {
       statusCode: 500,
