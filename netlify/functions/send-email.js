@@ -24,7 +24,7 @@ exports.handler = async function (event) {
         Vehicle: ${data.vehicle}
         Kilometers: ${data.kilometers}
         Preferred Date: ${data.preferred_date}
-        Services: ${service}
+        Services: ${services}
 
         Message: 
         ${data.message}
