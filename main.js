@@ -42,53 +42,25 @@ document.addEventListener("DOMContentLoaded", function () {
 }); // END DOMContentLoaded
 
    /* ------------------------------
-        CONTACT FORM SUBMISSION
-    ------------------------------ */
-
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-
-    if (!form) return;
-
-    form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-
-        try {
-            const response = await fetch("/.netlify/functions/send-email", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            });
-
-            if (response.ok) {
-                alert("Message sent successfully!");
-                form.reset();
-            } else {
-                alert("There was an error sending your message.");
-            }   
-        } catch (error) {
-            alert("Network error. Please try again.");
-        }
-    });
-});
-
-   /* ------------------------------
         CONTACT POPUP
     ------------------------------ */
-const buttons = document.querySelectorAll(".contact-trigger");
-const popup = document.querySelector(".contactPopup");
+// const buttons = document.querySelectorAll(".contact-trigger");
+// const popup = document.querySelector(".contactPopup");
 
-buttons.forEach(button => {
-    button.addEventListener("click", function () {
-        popup.style.display = "flex";
-    });
-});
+// buttons.forEach(button => {
+//     button.addEventListener("click", function () {
+//         popup.style.display = "flex";
+//     });
+// });
 
-popup.addEventListener("click", function () {
-    popup.style.display = "none";
-});
+// popup.addEventListener("click", function () {
+//     popup.style.display = "none";
+// });
+
+   /* ------------------------------
+        inputDate - PREVENT PAST DATES
+    ------------------------------ */
+const dateInput = document.getElementById('preferred_date');
+
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);

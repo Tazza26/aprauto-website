@@ -14,7 +14,11 @@ exports.handler = async function (event, context) {
         Name: ${data.name}
         Email: ${data.email}
         Phone: ${data.phone}
-        Service: ${data.service}
+        Rego: ${data.rego}
+        Vehicle: ${data.vehicle}
+        Kilometers: ${data.kilometers}
+        Preferred Date: ${data.preferred_date}
+        Services: ${data.service.join(", ")}
         Message: ${data.message}
       `,
     };

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AutoPart Replacements/Request a Quote</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://kit.fontawesome.com/741915af86.js" crossorigin="anonymous"></script>
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Carter+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="navbar">
+                    <div class="navbar-logo">    
+                        <a href="index.html">
+                        <img class="logo" src="images/Logo_clear_sml100.png" alt="APR Logo">
+                        </a>
+                    </div>
+                    <a href="#" class="toggle-button" aria-label="Toggle menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </a>
+                    <div class="navbar-links">
+                        <ul>
+                            <li><a href="index.html" class="nav_menu-link">Home</a></li>
+                            <!-- <li><a href="about.html" class="nav_menu-link">About Us</a></li>
+                            <li><a href="services.html" class="nav_menu-link">Services</a></li>
+                            <li><a href="areas.html" class="nav_menu-link">Areas We Serve</a></li>
+                            <li><a href="blog.html" class="nav_menu-link">Blog</a></li>
+                            <li><a href="tyresales.html" class="nav_menu-link">Tyre Sales</a></li>
+                            <li>
+                                <button class="contact-btn contact-trigger">Contact Us</button>
+                                <div class="popup contactPopup">
+                                    <div class="popup-content">
+                                        <p>Call Now</p>
+                                        <a href="tel:+61421386141" class="phone-number">0421 386 141</a>
+                                    </div>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    <!-- HERO SECTION -->
+    <section class="booking">
+        <div class="booking_container">
+        <div class="booking_left">
+            <div class="booking_img">
+                <img src="images/shop_img4.JPG" alt="APR mechanic working on a car in the workshop">
+            </div>
+            <div class="booking_info">
+                <p> Experience premium automotive care with quality workmanship, honest advice, and complete vehicle solutions — all under one roof.</p>
+                <p>APR proudly services customers across Enoggera and Brisbane’s northside and southside suburbs, including Mitchelton, Everton Park, Stafford, Kedron, Ashgrove and surrounding areas.</p>
+                <p>Submit your request and we’ll review your vehicle details before providing a quote and available booking times.</p>
+                <p>Need assistance or have a question before booking? <br>Contact our team on <a href="tel:+61421386141" class="phone-number">0421 386 141</a>.</p>
+            </div>
+        </div>
+
+        <div class="booking_form">
+            <h2>Request a service booking</h2>
+            <p>Tell us about your vehicle and we'll provide a fast, accurate quote</p>
+            <form id="contact-form"  class="contact-form" autocomplete="off">
+                            <!-- <label for="name">Name</label> -->
+                            <div class="input-group underline">
+                                <i class="fa-solid fa-user input-icon"></i>
+                                <input type="text" name="name" placeholder="Name" required />
+                            </div>
+                            <div class="input-group underline">
+                                <i class="fa-solid fa-envelope input-icon"></i>
+                                <input type="email" name="email" placeholder="Email" required />
+                            </div>
+                            <div class="input-group underline">
+                                <i class="fa-solid fa-phone input-icon"></i>
+                                <input type="tel" name="phone"  placeholder="Phone Number" required />
+                            </div>
+                            <div class="input-group underline">
+                                <i class="fa-solid fa-registered input-icon"></i>
+                                <input type="text" name="rego" placeholder="Rego (Registration Number)" required />
+                            </div>
+                            <div class="input-group underline">
+                                <i class="fa-solid fa-car input-icon"></i>
+                                <input type="text" name="vehicle" placeholder="Vehicle Make & Model" required />
+                            </div>
+                            <div class="input-group underline">
+                                <i class="fa-solid fa-gauge input-icon"></i>
+                                <input type="text" name="kilometers" placeholder="Kilometers run" required />
+                            </div>
+                            <label for="preferred_date">Preferred Date</label>
+                            <div class="input-group underline">
+                                <i class="fa-solid fa-calendar-days input-icon"></i>
+                                <input type="date" id="preferred_date" name="preferred_date" id="dateInput" placeholder="Preferred Date" required />
+                            </div>
+                            <fieldset class="services-group">
+                                <legend>Select Services Required</legend>
+                            <div class="service-category">
+                                <h5>Servicing & Repairs</h5>
+                                <label><input type="checkbox" name="service[]" value="Basic Service">Basic Service</label>
+                                <label><input type="checkbox" name="service[]" value="Logbook Service">Logbook Service</label>
+                                <label><input type="checkbox" name="service[]" value="Diagnostics / Check Engine Light">Diagnostics / Check Engine Light</label>
+                                <label><input type="checkbox" name="service[]" value="Electrical Repairs">Electrical Repairs</label>
+                                <label><input type="checkbox" name="service[]" value="Brakes / Suspension">Brakes / Suspension</label>
+                            </div>
+                            <div class="service-category">
+                                <h5>Driveline & Performance</h5>
+                                <label><input type="checkbox" name="service[]" value="Gearbox / Transmission">Gearbox / Transmission</label>
+                                <label><input type="checkbox" name="service[]" value="Differential / Driveline">Differential / Driveline</label>
+                            </div>
+                            <div class="service-category">
+                                <h5>Tyres & Wheels</h5>
+                                <label><input type="checkbox" name="service[]" value="Tyres">Tyres</label>
+                                <label><input type="checkbox" name="service[]" value="Wheel Alignment">Wheel Alignment</label>
+                            </div>
+                            <div class="service-category">
+                                <h5>Interior & Vehicle Enhancements</h5>
+                                <label><input type="checkbox" name="service[]" value="Upholstery repairs">Upholstery repairs</label>
+                                <label><input type="checkbox" name="service[]" value="Hood Lining Repair">Hood Lining Repair</label>
+                                <label><input type="checkbox" name="service[]" value="Window Tinting">Window Tinting</label>
+                                <label><input type="checkbox" name="service[]" value="Sunroof Repairs">Sunroof Repairs</label>
+                                <label><input type="checkbox" name="service[]" value="Supply and fit mirrors">Supply and fit mirrors</label>
+                            </div>
+                            <div class="service-category">
+                                <h5>Other Services</h5>
+                                <label><input type="checkbox" name="service[]" value="Roadworthy/Safety Certificate">Roadworthy/Safety Certificate</label>
+                                <label><input type="checkbox" name="service[]" value="Paintwork Repair">Paintwork Repair</label>
+                                <label><input type="checkbox" name="service[]" value="Car Detailing">Car Detailing</label>
+                                <label><input type="checkbox" name="service[]" value="Other">Other</label>
+                            </div>
+                            </fieldset>
+                            <label for="message">Message</label>
+                            <textarea name="message" name="message" id="message" rows="4" required></textarea>
+                            <p class="booking_note">We’ll contact you shortly with a quote and available booking times.</p>
+                            <button type="submit" class="btn">Send Request</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="deetbook">
+                <div class="deetbook_details">
+
+                    <div class="footer_col logo_col">    
+                        <img src="images/Logo_blue_sml.jpg" alt="APR Logo">
+                        <div class="deetbook_social">
+                            <h3>Follow Us</h3>
+                        <div class="social-icon">
+                        <a href="https://www.facebook.com/APRAutopartreplacements" target="_blank"><img src="icons/FB_icon.png" alt="Follow Autopart Replacements on Facebook" target="_blank" rel="noopener"></a>
+                        <a href="https://www.instagram.com/aprauto.mechanic" target="_blank"><img src="icons/Insta_icon.png" alt="Follow Autopart Replacements on Instagram" target="_blank" rel="noopener"></a>
+                    </div>
+                    </div>
+                    </div>
+
+                    <div class="footer_col">
+                        <h3>Contact Info</h3>
+                        <p>156 South Pine Road, Enoggera QLD 4051</p>
+                        <p>0421 386 141</p>
+                        <p>autopts@bigpond.net.au</p>
+                    </div>
+
+                    <div class="footer_col">
+                        <h3>Opening Hours</h3>
+                        <p>Monday - Friday<span>7:30 am - 5:00 pm</span></p>
+                        <p>Saturday<span>8:00 am - 2:00 pm</span></p>
+                        <p>Sunday <span>CLOSED</span></p>
+                    </div>
+
+                </div>
+
+                <div class="deetbook_map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.130274945379!2d152.98696557551317!3d-27.441704576331556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b94bd9e38183eab%3A0xf52eb1cba3e77c7e!2s156%20South%20Pine%20Rd%2C%20Enoggera%20QLD%204051!5e0!3m2!1sen!2sau!4v1700000000000"
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <span>Copyright @ 2025 Autopart Replacements. All Rights Reserved.</span>
+            <!-- <span>Website designed and developed by Taryn Michelle</span> -->
+        </footer>
+        <script src="booking-form.js"></script>
+        <script src="main.js" defer></script>
+</body>
+</html>
