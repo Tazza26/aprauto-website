@@ -1,10 +1,10 @@
-const sgMail = require("@sendgrid/mail");
+const {Resend} = require("resend");
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 exports.handler = async function (event) {
   try {
     const data = JSON.parse(event.body);
-
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     const services = Array.isArray(data.service)
       ? data.service.join(", ")
@@ -12,8 +12,8 @@ exports.handler = async function (event) {
 
     const msg = {
       to: "admin@aprauto.com.au",
-      from: "noreply@aprauto.com.au",
-      replyTo: data.email,
+      from: "APR Bookings <noreply@aprauto.com.au>",
+      reply_to: data.email,
       subject: `New Booking Request from ${data.name}`,
 
       text: `
@@ -31,7 +31,7 @@ exports.handler = async function (event) {
       `,
     };
 
-    await sgMail.send(msg);
+    await resend.emails.send(msg);
 
     return {
       statusCode: 200,
@@ -41,8 +41,8 @@ exports.handler = async function (event) {
     };
 
   } catch (error) {
-    console.error("SENDGRID ERROR:", error);
-    console.error("SENDGRID RESPONSE:", error.response?.body);
+    console.error("RESEND ERROR:", error);
+    console.error("RESEND RESPONSE:", error.response?.body);
 
     return {
       statusCode: 500,
