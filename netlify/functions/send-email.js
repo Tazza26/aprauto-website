@@ -10,10 +10,10 @@ exports.handler = async function (event) {
       ? data.service.join(", ")
       : "None selected";
 
-    const msg = {
-      to: "admin@aprauto.com.au",
+    const {data: emailData, error} = await resend.emails.send({
       from: "APR Bookings <noreply@aprauto.com.au>",
-      reply_to: data.email,
+      to: "admin@aprauto.com.au",
+      replyTo: data.email,
       subject: `New Booking Request from ${data.name}`,
 
       text: `
@@ -29,20 +29,28 @@ exports.handler = async function (event) {
         Message: 
         ${data.message}
       `,
-    };
+    });
 
-    await resend.emails.send(msg);
+    if (error) {
+      console.error(error);
+      return {
+        statusCode: 500,
+        body: JSON.stringify({
+          error,
+        }),
+      }
+    }
 
     return {
       statusCode: 200,
       body: JSON.stringify({ 
         message: "Email sent successfully!",
+        emailData,  
        }),
     };
 
   } catch (error) {
-    console.error("RESEND ERROR:", error);
-    console.error("RESEND RESPONSE:", error.response?.body);
+    console.error(error);
 
     return {
       statusCode: 500,
