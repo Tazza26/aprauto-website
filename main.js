@@ -62,5 +62,30 @@ document.addEventListener("DOMContentLoaded", function () {
     ------------------------------ */
 const dateInput = document.getElementById('preferred_date');
 
+if (dateInput) {
     const today = new Date().toISOString().split('T')[0];
     dateInput.setAttribute('min', today);
+}
+
+       /* ------------------------------
+        SERVICES SLIDER
+    ------------------------------ */
+const servicesSection = document.getElementById('services');
+const servicesGrid = document.querySelector('.services_grid');
+const servicesToggle = document.querySelector('.services_toggle');
+const toggleText = servicesToggle.querySelector('span');
+
+servicesToggle.addEventListener('click', () => {
+    servicesGrid.classList.toggle('expanded');
+
+    if (servicesGrid.classList.contains('expanded')) {
+        toggleText.textContent = 'Show Less';
+    } else {
+        toggleText.textContent = 'View All Services';
+
+        servicesSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+});
