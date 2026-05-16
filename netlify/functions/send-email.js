@@ -20,6 +20,7 @@ exports.handler = async function (event) {
         Name: ${data.name}
         Email: ${data.email}
         Phone: ${data.phone}
+        Contact Method: ${data.contact_method}
         Rego: ${data.rego}
         Vehicle: ${data.vehicle}
         Kilometers: ${data.kilometers}

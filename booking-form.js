@@ -9,6 +9,7 @@ form.addEventListener("submit", async (e) => {
         name: formData.get("name"),
         email: formData.get("email"),
         phone: formData.get("phone"),
+        contact_method: formData.getAll("contact_method[]"),
         rego: formData.get("rego"),
         vehicle: formData.get("vehicle"),
         kilometers: formData.get("kilometers"),

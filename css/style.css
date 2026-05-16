@@ -403,13 +403,6 @@ header{
 }
 
 .hero_text-title {
-    /* font-family: 'Roboto', sans-serif; */
-    /* font-weight: var(--fw-bold);
-    font-size: clamp(2rem, 4vw, 5rem);
-    text-transform: capitalize;
-    letter-spacing: 0.05rem;
-    margin: 0 0 1rem; */
-    /* font-size: clamp(2rem, 4vw, 3rem); */
     text-transform: capitalize;
     letter-spacing: -0.01rem;
     margin: 0.5rem 0 1.5rem;
@@ -453,7 +446,7 @@ header{
 .hero_btn:active {
     transform: translateY(0);
 } */
-.contact-btn {
+/* .contact-btn {
     background-color: var(--clr-secondary);
     color: var(--clr-dark);
     padding: 0.8rem 1.6rem;
@@ -508,7 +501,7 @@ header{
 .popup-content  a{
     font-size: 1.5rem;
     margin: 0 auto;
-}
+} */
 
 .phone-number {
     font-size: 1.2rem;
@@ -562,6 +555,10 @@ header{
     .hero_text-slogan {
         font-size: 1rem;
         margin-inline: auto;
+    }
+    .hero_text .hero_text-btn-group {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -1396,6 +1393,17 @@ footer {
     transition: 0.25s ease;
 }
 
+.input-icon-span {
+    position: absolute;
+    top: 35%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: var(--clr-primary);
+    pointer-events: none;
+    transition: 0.25s ease;
+}
+
 .input-group.underline {
     position: relative;
     margin-bottom: 5px;
@@ -1433,10 +1441,38 @@ footer {
 }
 
 .services-group legend {
-    font-weight: 600;
-    text-transform: capitalize;
+    font-size: 0.9rem;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
     color: var(--clr-dark);
-    margin-bottom: 1rem;
+    margin: 0.8rem 0 0 0;
+}
+
+.contact-method {
+    margin: 0 0 1.5rem 0;
+}
+
+.contact-method h5 {
+    margin: 0 0 0.8rem 0;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    font-weight: var(--fw-bold);
+    font-style: italic;
+}
+
+.preferred-date h5 {
+    margin: 0.8rem 0 0 0;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    font-weight: var(--fw-bold);
+    font-style: italic;
+}
+
+.contact-method label {
+    margin: 0.7rem;
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: var(--fw-normal);
 }
 
 .service-category {
@@ -1446,8 +1482,8 @@ footer {
 .service-category h5 {
     margin-bottom: 0.8rem;
     font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
+    text-transform: capitalize;
+    /* letter-spacing: 0.05rem; */
     color: var(--clr-primary);
 }
 
@@ -1477,6 +1513,26 @@ footer {
     margin-top: var(--space-sm);
     font-style: italic;
     text-align: center;
+}
+
+.input-span {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.input-group .underline .span {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0;
+}
+
+.input-message {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0;
 }
 
 /* .booking_highlights {

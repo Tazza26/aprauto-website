@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AutoPart Replacements/Request a Quote</title>
+    <title>AutoPart Replacements/Tyres</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="reset.css">
@@ -37,8 +37,8 @@
                             <li><a href="services.html" class="nav_menu-link">Services</a></li>
                             <li><a href="areas.html" class="nav_menu-link">Areas We Serve</a></li>
                             <li><a href="blog.html" class="nav_menu-link">Blog</a></li> -->
-                            <!-- <li><a href="tyres.html" class="nav_menu-link">Tyres</a></li> -->
-                            <!-- <li><a href="findapart.html" class="nav_menu-link">Find a Part</a></li> -->
+                            <li><a href="tyres.html" class="nav_menu-link">Tyres</a></li>
+                            <li><a href="findapart.html" class="nav_menu-link">Find a Part</a></li>
                             <li><a href="#contact" class="nav_menu-link">Contact us</a></li>
                         </ul>
                     </div>
@@ -50,7 +50,7 @@
         <div class="booking_container">
         <div class="booking_left">
             <div class="booking_img">
-                <img src="images/shop_img4.JPG" alt="APR mechanic working on a car in the workshop">
+                <img src="images/Tyres.png" alt="APR mechanic working on a car in the workshop">
             </div>
             <div class="booking_info">
                 <p> Experience premium automotive care with quality workmanship, honest advice, and complete vehicle solutions — all under one roof.</p>
@@ -77,77 +77,61 @@
                                 <i class="fa-solid fa-phone input-icon"></i>
                                 <input type="tel" name="phone"  placeholder="Phone Number" required />
                             </div>
-                            <div class="contact-method">
-                                <h5>Best Contact Method</h5>
-                                <label><input type="checkbox" name="contact_method[]" value="Call">Call</label>
-                                <label><input type="checkbox" name="contact_method[]" value="SMS">SMS</label>
-                                <label><input type="checkbox" name="contact_method[]" value="Email">Email</label>
-                            </div>
                             <div class="input-group underline">
                                 <i class="fa-solid fa-registered input-icon"></i>
                                 <input type="text" name="rego" placeholder="Rego (Registration Number)" required />
                             </div>
                             <div class="input-group underline">
-                                <i class="fa-solid fa-car input-icon-span"></i>
-                                <input type="text" name="vehicle" placeholder="Vehicle Make, Model & Year" required />
-                                <div>
-                                    <span class="input-span">e.g. Toyata Hilux 2018</span>
-                                </div>
+                                <i class="fa-solid fa-car input-icon"></i>
+                                <input type="text" name="vehicle" placeholder="Vehicle Make, Model & Year eg Toyota Hilux 2018" required />
                             </div>
                             <div class="input-group underline">
                                 <i class="fa-solid fa-gauge input-icon"></i>
-                                <input type="text" name="kilometers" placeholder="Kilometers run" required />
+                                <input type="text" name="tyre size" placeholder="Tyre Size eg 265/65R17" required />
                             </div>
-                            <label for="preferred_date" class="preferred-date">
-                                <h5>Preferred Date</h5></label>
-                            <div class="input-group underline">
-                                <i class="fa-solid fa-calendar-days input-icon"></i>
-                                <input type="date" id="preferred_date" name="preferred_date" required />
-                            </div>
-
                             <fieldset class="services-group">
-                                <legend>Select Services Required</legend>
                             <div class="service-category">
-                                <h5>Servicing & Repairs</h5>
-                                <label><input type="checkbox" name="service[]" value="Basic Service">Basic Service</label>
-                                <label><input type="checkbox" name="service[]" value="Logbook Service">Logbook Service</label>
-                                <label><input type="checkbox" name="service[]" value="Engine Repairs">Engine Repairs</label>
-                                <label><input type="checkbox" name="service[]" value="Brake Repairs">Brake Repairs</label>
-                                <label><input type="checkbox" name="service[]" value="Suspension & Steering">Suspension & Steering</label>
-                                <label><input type="checkbox" name="service[]" value="Diagnostics / Check Engine Light">Diagnostics / Check Engine Light</label>
-                                <label><input type="checkbox" name="service[]" value="Electrical Repairs">Electrical Repairs</label>
-                                <label><input type="checkbox" name="service[]" value="Air Conditioning & Heating">Air Conditioning & Heating</label>
-                                <label><input type="checkbox" name="service[]" value="Exhaust Repairs">Exhaust Repairs</label>
+                                <h5>Tyre Type</h5>
+                                <label><input type="checkbox" name="service[]" value="Passenger">Passenger</label>
+                                <label><input type="checkbox" name="service[]" value="SUV">SUV</label>
+                                <label><input type="checkbox" name="service[]" value="4WD">4WD</label>
+                                <label><input type="checkbox" name="service[]" value="Performance">Performance</label>
+                                <label><input type="checkbox" name="service[]" value="Commercial">Commercial</label>
+                                <label><input type="checkbox" name="service[]" value="All Terrain">All Terrain</label>
+                                <label><input type="checkbox" name="service[]" value="Mud Terrain">Mud Terrain</label>
                             </div>
                             <div class="service-category">
-                                <h5>Driveline & Performance</h5>
-                                <label><input type="checkbox" name="service[]" value="Gearbox & Transmission">Gearbox & Transmission</label>
-                                <label><input type="checkbox" name="service[]" value="Differential & Driveline">Differential & Driveline</label>
-                                <label><input type="checkbox" name="service[]" value="Performance Upgrades">Performance Upgrades</label>
+                                <h5>Budget Preference</h5>
+                                <label><input type="checkbox" name="service[]" value="Budget">Budget</label>
+                                <label><input type="checkbox" name="service[]" value="Mid Range">Mid Range</label>
+                                <label><input type="checkbox" name="service[]" value="Premium">Premium</label>
+                                <label><input type="checkbox" name="service[]" value="Unsure / Need Advice">Unsure / Need Advice</label>
                             </div>
                             <div class="service-category">
-                                <h5>Tyres & Wheels</h5>
-                                <label><input type="checkbox" name="service[]" value="Tyres">Tyres</label>
+                                <h5>Quantity Needed</h5>
+                                <label><input type="checkbox" name="service[]" value="1">1</label>
+                                <label><input type="checkbox" name="service[]" value="2">2</label>
+                                <label><input type="checkbox" name="service[]" value="4">4</label>
+                                <label><input type="checkbox" name="service[]" value="Full Set + Spare">Full Set + Spare</label>
+                            </div>
+                            <div class="service-category">
+                                <h5>Services Needed</h5>
+                                <label><input type="checkbox" name="service[]" value="Tyre Fitting">Tyre Fitting</label>
+                                <label><input type="checkbox" name="service[]" value="Wheel Balancing">Wheel Balancing</label>
                                 <label><input type="checkbox" name="service[]" value="Wheel Alignment">Wheel Alignment</label>
+                                <label><input type="checkbox" name="service[]" value="Puncture Repair">Puncture Repair</label>
+                                <label><input type="checkbox" name="service[]" value="Rotation">Rotation</label>
+                                <label><input type="checkbox" name="service[]" value="Unsure">Unsure</label>
                             </div>
                             <div class="service-category">
-                                <h5>Interior, Exterior & Accessories</h5>
-                                <label><input type="checkbox" name="service[]" value="Upholstery repairs">Upholstery repairs</label>
-                                <label><input type="checkbox" name="service[]" value="Hood Lining Repair">Hood Lining Repair</label>
-                                <label><input type="checkbox" name="service[]" value="Window Tinting">Window Tinting</label>
-                                <label><input type="checkbox" name="service[]" value="Sunroof Repairs">Sunroof Repairs</label>
-                                <label><input type="checkbox" name="service[]" value="Mirror Supply & Fitment">Mirror Supply & Fitment</label>
-                                <label><input type="checkbox" name="service[]" value="Paintwork Repairs">Paintwork Repairs</label>
-                            </div>
-                            <div class="service-category">
-                                <h5>Other Services</h5>
-                                <label><input type="checkbox" name="service[]" value="Roadworthy/Safety Certificate">Roadworthy/Safety Certificate</label>
-                                <label><input type="checkbox" name="service[]" value="Car Detailing">Car Detailing</label>
-                                <label><input type="checkbox" name="service[]" value="Other">Other</label>
+                                <h5>best contact method</h5>
+                                <label><input type="checkbox" name="service[]" value="Call">Call</label>
+                                <label><input type="checkbox" name="service[]" value="SMS">SMS</label>
+                                <label><input type="checkbox" name="service[]" value="Email">Email</label>
                             </div>
                             </fieldset>
-                            <label for="message" class="input-message">Message</label>
-                            <textarea name="message" id="message" rows="4" required></textarea>
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="4" placeholder="Additional details... e.g. Need tyres ASAP, mainly highway driving, looking for a quieter ride, or vehicle used for towing."></textarea>
                             <p class="booking_note">We’ll contact you shortly with a quote and available booking times.</p>
                             <button type="submit" class="btn">Send Request</button>
                         </form>
@@ -159,9 +143,7 @@
                 <div class="deetbook_details">
 
                     <div class="footer_col logo_col">    
-                        <a href="index.html">
-                            <img src="images/Logo_blue_sml.jpg" alt="APR Logo">
-                        </a>
+                        <img src="images/Logo_blue_sml.jpg" alt="APR Logo">
                         <div class="deetbook_social">
                             <h3>Follow Us</h3>
                         <div class="social-icon">
@@ -175,9 +157,8 @@
                         <h3>Contact Info</h3>
                         <p>156 South Pine Road, Enoggera QLD 4051</p>
                         <p>
-                        <a href="tel:0421386141" class="footer_phone">
-                            0421 386 141
-                        </a>
+                            <a href="tel:0421386141" class="footer_phone">
+                            0421 386 141</a>
                         </p>
                         <p>admin@aprauto.com.au</p>
                     </div>
